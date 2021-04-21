@@ -1,0 +1,244 @@
+|up_down
+Y3 <= 4bit:inst.Y3
+D => 4bit:inst.D
+D => 4bit:inst2.D
+E => 4bit:inst.E
+LOAD => 4bit:inst.LOAD
+LOAD => 4bit:inst2.LOAD
+I3 => 4bit:inst.I3
+I2 => 4bit:inst.I2
+I1 => 4bit:inst.I1
+I0 => 4bit:inst.I0
+CLK => 4bit:inst.CLK
+CLK => 4bit:inst2.CLK
+Y2 <= 4bit:inst.Y2
+Y7 <= 4bit:inst2.Y3
+I7 => 4bit:inst2.I3
+I6 => 4bit:inst2.I2
+I5 => 4bit:inst2.I1
+I4 => 4bit:inst2.I0
+Y6 <= 4bit:inst2.Y2
+Y0 <= 4bit:inst.Y0
+Y1 <= 4bit:inst.Y1
+Y4 <= 4bit:inst2.Y0
+Y5 <= 4bit:inst2.Y1
+
+
+|up_down|4bit:inst
+Y3 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst10.CLK
+CLK => inst13.CLK
+CLK => inst12.CLK
+CLK => inst11.CLK
+LOAD => MUX2-1:inst6.S
+LOAD => MUX2-1:inst9.S
+LOAD => MUX2-1:inst8.S
+LOAD => MUX2-1:inst7.S
+D => HAS:inst.D
+D => HAS:inst1.D
+D => HAS:inst2.D
+D => HAS:inst3.D
+E => HAS:inst3.E
+I0 => MUX2-1:inst9.D1
+I1 => MUX2-1:inst8.D1
+I2 => MUX2-1:inst7.D1
+I3 => MUX2-1:inst6.D1
+Y2 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Y0 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Cx <= HAS:inst.Cx
+
+
+|up_down|4bit:inst|MUX2-1:inst6
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst|HAS:inst
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst|HAS:inst1
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst|HAS:inst2
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst|HAS:inst3
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst|MUX2-1:inst9
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst|MUX2-1:inst8
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst|MUX2-1:inst7
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst2
+Y3 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst10.CLK
+CLK => inst13.CLK
+CLK => inst12.CLK
+CLK => inst11.CLK
+LOAD => MUX2-1:inst6.S
+LOAD => MUX2-1:inst9.S
+LOAD => MUX2-1:inst8.S
+LOAD => MUX2-1:inst7.S
+D => HAS:inst.D
+D => HAS:inst1.D
+D => HAS:inst2.D
+D => HAS:inst3.D
+E => HAS:inst3.E
+I0 => MUX2-1:inst9.D1
+I1 => MUX2-1:inst8.D1
+I2 => MUX2-1:inst7.D1
+I3 => MUX2-1:inst6.D1
+Y2 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Y0 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Cx <= HAS:inst.Cx
+
+
+|up_down|4bit:inst2|MUX2-1:inst6
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst2|HAS:inst
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst2|HAS:inst1
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst2|HAS:inst2
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst2|HAS:inst3
+Cx <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+E => inst10.IN2
+E => inst5.IN0
+D => inst.IN0
+D => inst10.IN1
+Q => inst1.IN2
+Q => inst4.IN0
+Q => inst5.IN1
+Dx <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down|4bit:inst2|MUX2-1:inst9
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst2|MUX2-1:inst8
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+
+|up_down|4bit:inst2|MUX2-1:inst7
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst4.IN0
+D1 => inst1.IN1
+D0 => inst.IN1
+
+

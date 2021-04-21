@@ -1,0 +1,50 @@
+|Moore
+OUT <= Moore_Decode:inst4.OUT
+CLOCK => RegisterBlock:inst2.CLOCK
+INPUT[0] => NextStateConverter:inst.INPUT[0]
+INPUT[1] => NextStateConverter:inst.INPUT[1]
+INPUT[2] => NextStateConverter:inst.INPUT[2]
+INPUT[3] => NextStateConverter:inst.INPUT[3]
+
+
+|Moore|Moore_Decode:inst4
+OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => inst3.IN0
+IN[1] => inst.IN1
+IN[2] => inst.IN0
+
+
+|Moore|RegisterBlock:inst2
+OUT[0] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+IN[0] => inst2.DATAIN
+IN[1] => inst1.DATAIN
+IN[2] => inst.DATAIN
+
+
+|Moore|NextStateConverter:inst
+D[0] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+INPUT[0] => inst.IN3
+INPUT[0] => inst11.IN0
+INPUT[0] => inst19.IN3
+INPUT[1] => inst10.IN0
+INPUT[1] => inst18.IN2
+INPUT[2] => inst9.IN0
+INPUT[2] => inst16.IN1
+INPUT[3] => inst8.IN0
+INPUT[3] => inst19.IN0
+Q[0] => inst15.IN0
+Q[0] => inst17.IN3
+Q[0] => inst20.IN3
+Q[1] => inst12.IN2
+Q[1] => inst14.IN0
+Q[1] => inst20.IN2
+Q[2] => inst13.IN0
+
+
